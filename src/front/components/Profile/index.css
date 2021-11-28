@@ -1,0 +1,43 @@
+@font-face {
+    font-family: "Hahmlet-SemiBold";
+    src: url("../../fonts/Hahmlet-SemiBold.ttf");
+}
+.profile-box {
+    text-align: center;
+}
+
+.profile-img {
+    border-radius: 50%;
+    width: 130px;
+}
+.profile-text {
+    text-align: center;
+    font-family: "Hahmlet-SemiBold";
+}
+
+#name {
+    margin-bottom: 0;
+    font-weight: 400;
+}
+
+#engName {
+    margin-top: 0;
+    font-weight: 400;
+}
+
+.profile-linkBox {
+    font-family: "Hahmlet-SemiBold";
+    margin-top: 30px;
+}
+
+.profile-email {
+    width: 20px;
+    padding-right: 3px;
+}
+
+.linkBox-line {
+    margin: 0px 18%;
+}
+
+
+

@@ -1,0 +1,13 @@
+.badgeList {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0px 19%;
+    justify-items: center;
+}
+
+.badge {
+    margin: 3px;
+    width: 75px;
+    height: 24px;
+}
+

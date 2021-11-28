@@ -1,23 +1,27 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { BrowserRouter } from "react-router-dom";
 import { ThemeProvider } from "@material-ui/styles";
 import { CssBaseline } from "@material-ui/core";
 
-import Themes from "./themes";
-import App from "./components/App";
+import Themes from "./admin/themes";
+// import App from "./admin/components/App";
+import App from "./App";
 import * as serviceWorker from "./serviceWorker";
-import { LayoutProvider } from "./context/LayoutContext";
-import { UserProvider } from "./context/UserContext";
+import { LayoutProvider } from "./admin/context/LayoutContext";
+import { UserProvider } from "./admin/context/UserContext";
 
 ReactDOM.render(
-  <LayoutProvider>
-    <UserProvider>
-      <ThemeProvider theme={Themes.default}>
-        <CssBaseline />
-        <App />
-      </ThemeProvider>
-    </UserProvider>
-  </LayoutProvider>,
+  <BrowserRouter>
+    <LayoutProvider>
+      <UserProvider>
+        <ThemeProvider theme={Themes.default}>
+          <CssBaseline />
+          <App />
+        </ThemeProvider>
+      </UserProvider>
+    </LayoutProvider>
+  </BrowserRouter>,
   document.getElementById("root"),
 );
 
