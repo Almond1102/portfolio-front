@@ -13,20 +13,7 @@ function App() {
     <div className="App">
       <div className="contents">
         <Nav/>
-        <Switch> 
-          <Route exact={true} path="/">
-            <Main/>
-          </Route>
-          <Route path="/About">
-            <About/>
-          </Route>
-          <Route path="/Post">
-            <Post/>
-          </Route>
-          <Route path="/Portfolio">
-            <Portfolio/>
-          </Route>
-        </Switch>
+        <Main/>
       </div>
     </div>
   );

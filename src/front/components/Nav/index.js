@@ -2,10 +2,14 @@ import React from 'react'
 import { Link } from "react-router-dom";
 import "./index.css"
 import { useState, useEffect } from "react";
+import { useSelector, useDispatch } from 'react-redux'
+import { navpages } from "../../features/pageSlice"
 
 function Nav() {
+    const navpage = useSelector((state) => state.page.nowpage)
+    const [nowLink, setnowLink] = useState(navpage); //현재 보는 페이지 가져오기
+    const dispatch = useDispatch()
 
-    const [nowLink, setnowLink] = useState();
     const [show, setShow] = useState(false);
     let moved = () => {
         if(window.scroll > 100)
@@ -21,20 +25,18 @@ function Nav() {
 
     let link = [{"About" : "소개"} , {"Portfolio" : "포트폴리오"} ,  {"Post" : "포스트"}];
 
+    const nowpage = (page) => {
+        setnowLink(page);
+        dispatch(navpages(page))
+    }
 
-
-    
-    const openLink = async (index) => {
-        setnowLink(index);
-    };
-
-    const linkList = link.map((linked, index) => <Link key={index} onClick={() => openLink(index)} className={`nav_link ${nowLink === index && "underline"}`}  to={`/${Object.keys(linked)}`}>
+    const linkList = link.map((linked, index) => <Link key={index} onClick={()=> {nowpage(Object.values(linked))}}className={`nav_link ${nowLink == Object.values(linked) && "underline"}`}  to={`/${Object.keys(linked)}`}>
         <li>{`${Object.values(linked)}`}</li></Link>)
 
     return (
         <div className={`Navbar ${moved && "Navbar_white"}`}>
             <div className="navbar_logo">
-                {<Link onClick={() => openLink(null)} to="/"><img className="logo_image" src="img/sale.png" /></Link>}
+                {<Link to="/"><img className="logo_image" src="img/sale.png" /></Link>}
             </div>
             <div className="navbar_contents">
                 <ul className="navbar_menu">

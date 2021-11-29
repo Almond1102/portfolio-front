@@ -11,7 +11,12 @@ import * as serviceWorker from "./serviceWorker";
 import { LayoutProvider } from "./admin/context/LayoutContext";
 import { UserProvider } from "./admin/context/UserContext";
 
+// redux
+import {store} from './app/store'
+import {Provider} from 'react-redux'
+
 ReactDOM.render(
+  <Provider store={store}>
   <BrowserRouter>
     <LayoutProvider>
       <UserProvider>
@@ -21,7 +26,8 @@ ReactDOM.render(
         </ThemeProvider>
       </UserProvider>
     </LayoutProvider>
-  </BrowserRouter>,
+  </BrowserRouter>
+  </Provider>,
   document.getElementById("root"),
 );
 

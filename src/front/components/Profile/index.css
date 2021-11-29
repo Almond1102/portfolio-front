@@ -4,6 +4,7 @@
 }
 .profile-box {
     text-align: center;
+    padding: 0px 14%;
 }
 
 .profile-img {
@@ -27,7 +28,10 @@
 
 .profile-linkBox {
     font-family: "Hahmlet-SemiBold";
-    margin-top: 30px;
+    width: 100%;
+}
+.profile-linkBox h3 {
+    margin-top: 3px;
 }
 
 .profile-email {
