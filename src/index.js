@@ -16,18 +16,20 @@ import {store} from './app/store'
 import {Provider} from 'react-redux'
 
 ReactDOM.render(
-  <Provider store={store}>
-  <BrowserRouter>
-    <LayoutProvider>
-      <UserProvider>
-        <ThemeProvider theme={Themes.default}>
-          <CssBaseline />
-          <App />
-        </ThemeProvider>
-      </UserProvider>
-    </LayoutProvider>
-  </BrowserRouter>
-  </Provider>,
+  <CookiesProvider>
+    <Provider store={store}>
+      <BrowserRouter>
+        <LayoutProvider>
+          <UserProvider>
+            <ThemeProvider theme={Themes.default}>
+              <CssBaseline />
+              <App />
+            </ThemeProvider>
+          </UserProvider>
+        </LayoutProvider>
+      </BrowserRouter>
+    </Provider>
+  </CookiesProvider>,
   document.getElementById("root"),
 );
 
