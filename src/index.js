@@ -10,13 +10,14 @@ import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import { LayoutProvider } from "./admin/context/LayoutContext";
 import { UserProvider } from "./admin/context/UserContext";
+import { CookiesProvider } from 'react-cookie';
 
 // redux
 import {store} from './app/store'
 import {Provider} from 'react-redux'
 
 ReactDOM.render(
-  <CookiesProvider>
+<CookiesProvider>
     <Provider store={store}>
       <BrowserRouter>
         <LayoutProvider>

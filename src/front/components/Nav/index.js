@@ -11,11 +11,36 @@ function Nav() {
     const dispatch = useDispatch()
 
     const [show, setShow] = useState(false);
+
     let moved = () => {
         if(window.scroll > 100)
             setShow(true);
         else
             setShow(false);
+    }
+
+    const navsearchbar = () => { //현재 보는 페이지에 따라 검색바 구현
+        if(nowLink === "Post") {
+            return (
+                <div className="navbar_search">
+                    <input
+                        type={"text"}
+                        id={"navbar-search"}
+                        placeholder={"Search blog posts"}
+                        size={"30"}/>
+                    <button type="submit">Search</button>
+                    {console.log("hi hello")}
+                </div>
+            )
+        }
+        else {
+            return (
+                <div className="navbar_search">
+                    <a href="#">GitHub</a>
+                    {console.log("hi hello")}
+                </div>
+            )
+        }
     }
 
     useEffect(()=> {
@@ -34,7 +59,7 @@ function Nav() {
         <li>{`${Object.values(linked)}`}</li></Link>)
 
     return (
-        <div className={`Navbar ${moved && "Navbar_white"}`}>
+        <div className={`Navbar ${show && "Navbar_white"}`}>
             <div className="navbar_logo">
                 {<Link to="/"><img className="logo_image" src="img/sale.png" /></Link>}
             </div>
@@ -45,10 +70,10 @@ function Nav() {
                     {<Link className="nav_link" to="/Review"><li>회고</li></Link>} */}
                 </ul>
             </div>
-            <div className="navbar_login">
-                {<Link className="nav_link"to="/Login"><img className="login_image" src="img/logo.png" />
-                <span className="login_text">로그인</span></Link>}
+            <div>
+                {navsearchbar()}
             </div>
+
 
         </div>
     )
