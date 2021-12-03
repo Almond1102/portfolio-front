@@ -6,7 +6,9 @@ function Post() {
     return (
         <div>
             <Nav/>
-            <h2 className="Post_title">Expenses</h2>
+            <div className="post-box">
+                <h2 className="Post_title">Expenses</h2>
+            </div>
         </div>
     )
 }

@@ -20,24 +20,22 @@ function Nav() {
     }
 
     const navsearchbar = () => { //현재 보는 페이지에 따라 검색바 구현
-        if(nowLink === "Post") {
+        //간격을 맞춰야할 필요가 있다
+        if(nowLink[0] == "포스트") {
             return (
-                <div className="navbar_search">
+                <div className="navbar-search">
                     <input
                         type={"text"}
                         id={"navbar-search"}
-                        placeholder={"Search blog posts"}
+                        placeholder={"블로그 포스트 검색하기"}
                         size={"30"}/>
-                    <button type="submit">Search</button>
-                    {console.log("hi hello")}
                 </div>
             )
         }
         else {
             return (
-                <div className="navbar_search">
+                <div className="navbar-search">
                     <a href="#">GitHub</a>
-                    {console.log("hi hello")}
                 </div>
             )
         }
@@ -55,13 +53,13 @@ function Nav() {
         dispatch(navpages(page))
     }
 
-    const linkList = link.map((linked, index) => <Link key={index} onClick={()=> {nowpage(Object.values(linked))}}className={`nav_link ${nowLink == Object.values(linked) && "underline"}`}  to={`/${Object.keys(linked)}`}>
+    const linkList = link.map((linked, index) => <Link key={index} onClick={()=> {nowpage(Object.values(linked))}}className={`nav_link ${nowLink[0] == Object.values(linked) && "underline"}`}  to={`/${Object.keys(linked)}`}>
         <li>{`${Object.values(linked)}`}</li></Link>)
 
     return (
         <div className={`Navbar ${show && "Navbar_white"}`}>
             <div className="navbar_logo">
-                {<Link to="/"><img className="logo_image" src="img/sale.png" /></Link>}
+                {<Link to="/"  onClick={()=> nowpage("")} ><img className="logo_image" src="img/sale.png" /></Link>}
             </div>
             <div className="navbar_contents">
                 <ul className="navbar_menu">
@@ -70,9 +68,7 @@ function Nav() {
                     {<Link className="nav_link" to="/Review"><li>회고</li></Link>} */}
                 </ul>
             </div>
-            <div>
-                {navsearchbar()}
-            </div>
+            {navsearchbar()}
 
 
         </div>

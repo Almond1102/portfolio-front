@@ -20,10 +20,6 @@
     background-color: #e1e1e1;
 }
 
-.navbar_contents {
-}
-
-
 
 .logo_image {
     width: 100px;
@@ -42,11 +38,7 @@
 }
 
 .nav_link :hover {
-    background: rgb(131,58,180);
-    background: linear-gradient(90deg, rgba(131,58,180,1) 20%, rgba(253,29,29,1) 40%, rgba(252,106,50,1) 60%, rgba(252,123,55,1) 80%, rgba(252,176,69,1) 100%);
-    color: transparent;
-    -webkit-background-clip: text;
-    transition: all 0.5s;
+
 }
 
 .underline {
@@ -56,6 +48,7 @@
     background: linear-gradient(90deg, rgba(131,58,180,1) 20%, rgba(253,29,29,1) 40%, rgba(252,106,50,1) 60%, rgba(252,123,55,1) 80%, rgba(252,176,69,1) 100%);
     color: transparent;
     -webkit-background-clip: text;
+    transition: all 0.5s;
 }
 
 
@@ -70,8 +63,13 @@
     text-decoration-line: none;
 }
 
-#navbar-search {
-    margin-right: 5px;
+.navbar-search {
+    width: 10%;
+}
+
+.navbar-search a {
+    text-decoration: none;
+    color: black;
 }
 
 
