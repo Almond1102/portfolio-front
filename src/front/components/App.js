@@ -10,12 +10,10 @@ import About from "../pages/About/index"
 
 function App() {
   return (
-    <div className="App">
-      <div className="contents">
+    <>
         <Nav/>
         <Main/>
-      </div>
-    </div>
+    </>
   );
 }
 

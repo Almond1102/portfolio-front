@@ -1,15 +1,18 @@
 .main_box {
     margin-top: 55px;
+    text-align: center;
+    width: 1900px;
     float: left;
-    width: 100%;
-    padding-left: 15%;
+    padding: 0% 9%;
     grid-template-columns: 1fr 2fr;
     justify-items: center;
 }
 .main_profile {
     float: left;
-    width: 20%;
-    padding-top: 8%;
+    width: 27%;
+    margin-top: 10%;
+    margin-left: 5%;
+    padding: 0px 6%;
 }
 
 .main_contents {

@@ -7,7 +7,7 @@ function Profile() {
 
 
     return (
-        <div className="profile-box">
+        <>
             <div>
                 <img className="profile-img" src="img/profile.png"/>
             </div>
@@ -21,10 +21,15 @@ function Profile() {
             <hr/>
             <div className="profile-linkBox">
                 <h3>Contact Me</h3>
-                <p><img className="profile-email" src="img/mail_email_message_electronic_online_web_icon-icons.com_59986.png"/><span id="email-text">bjc1102@naver.com</span></p>
-                <a target="_blank"href="https://github.com/Badug-i"><img src="https://img.shields.io/badge/My GitHub-181717?style=social&logo=GitHub&logoColor=Black"/></a>
+                <p><img
+                    className="profile-email"
+                    src="img/mail_email_message_electronic_online_web_icon-icons.com_59986.png"/>
+                    <span id="email-text">bjc1102@naver.com</span>
+                </p>
+                <a target="_blank" href="https://github.com/Badug-i"><img
+                    src="https://img.shields.io/badge/My GitHub-181717?style=social&logo=GitHub&logoColor=Black"/></a>
             </div>
-        </div>
+        </>
     )
 }
 

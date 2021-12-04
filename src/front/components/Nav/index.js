@@ -13,7 +13,7 @@ function Nav() {
     const [show, setShow] = useState(false);
 
     let moved = () => {
-        if(window.scroll > 100)
+        if(window.scrollY > 50)
             setShow(true);
         else
             setShow(false);
@@ -34,7 +34,7 @@ function Nav() {
         }
         else {
             return (
-                <div className="navbar-search">
+                <div className="navbar-link">
                     <a href="#">GitHub</a>
                 </div>
             )
@@ -59,7 +59,7 @@ function Nav() {
     return (
         <div className={`Navbar ${show && "Navbar_white"}`}>
             <div className="navbar_logo">
-                {<Link to="/"  onClick={()=> nowpage("")} ><img className="logo_image" src="img/sale.png" /></Link>}
+                {<Link to="/"  onClick={()=> nowpage("")} ><img className="logo_image" src="img/sale1.png" /></Link>}
             </div>
             <div className="navbar_contents">
                 <ul className="navbar_menu">
