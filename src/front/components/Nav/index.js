@@ -12,7 +12,7 @@ function Nav() {
 
     const [show, setShow] = useState(false);
 
-    let moved = () => {
+    const moved = () => {
         if(window.scrollY > 50)
             setShow(true);
         else
@@ -43,7 +43,11 @@ function Nav() {
 
     useEffect(()=> {
         window.addEventListener("scroll", moved)
+        return () => {
+            window.removeEventListener("scroll", moved)
+        };
     }, [])
+    
 
 
     let link = [{"About" : "소개"} , {"Portfolio" : "포트폴리오"} ,  {"Post" : "포스트"}];

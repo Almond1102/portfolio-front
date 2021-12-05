@@ -5,7 +5,7 @@ import AdminApp from "./admin/components/App"
 import Login from "./admin/pages/login/Login"
 import About from "./front/pages/About/index"
 import Post from "./front/pages/Post/index"
-import Portfolio from './front/pages/Portfolio';
+import Portfolio from './front/pages/Portfolio/index';
 
 
 
