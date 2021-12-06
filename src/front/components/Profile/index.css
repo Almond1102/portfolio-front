@@ -2,10 +2,6 @@
     font-family: "Hahmlet-SemiBold";
     src: url("../../fonts/Hahmlet-SemiBold.ttf");
 }
-.profile-box {
-    text-align: center;
-    padding: 0px 14%;
-}
 
 .profile-img {
     border-radius: 50%;

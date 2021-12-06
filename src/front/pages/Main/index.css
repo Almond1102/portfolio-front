@@ -1,18 +1,17 @@
 .main_box {
     margin-top: 55px;
     text-align: center;
-    width: 1900px;
+    min-width: 1190px;
     float: left;
-    padding: 0% 9%;
-    grid-template-columns: 1fr 2fr;
     justify-items: center;
+    margin: 50px 15%;
 }
 .main_profile {
     float: left;
     width: 27%;
     margin-top: 10%;
     margin-left: 5%;
-    padding: 0px 6%;
+    padding: 0px 40px;
 }
 
 .main_contents {
