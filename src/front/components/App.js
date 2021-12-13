@@ -8,7 +8,6 @@ import Portfolio from "../pages/Portfolio/index"
 function App() {
   return (
     <>
-        <Nav/>
         <Main/>
     </>
   );

@@ -63,7 +63,7 @@ function Nav() {
     return (
         <div className={`Navbar ${show && "Navbar_white"}`}>
             <div className="navbar_logo">
-                {<Link to="/"  onClick={()=> nowpage("")} ><img className="logo_image" src="img/sale1.png" /></Link>}
+                {<Link to="/"  onClick={()=> nowpage("")}><h2 className="nav-logo">최병주</h2></Link>}
             </div>
             <div className="navbar_contents">
                 <ul className="navbar_menu">

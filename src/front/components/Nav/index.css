@@ -11,17 +11,17 @@
     transition: all 0.5s;
     transition-timing-function: ease-out;
     font-family: "Noto Sans kr", sans-serif;
+    padding: 6px;
 }
 
 .Navbar_white {
     background-color: rgb(196,201,211);
 }
 
-
-.logo_image {
-    width: 100px;
-    height: 80px;
+.nav-logo {
+    text-decoration: none;
 }
+
 
 .Navbar:hover {
     box-shadow: 0 17px 20px -18px rgba(0, 0, 0, 1);    

@@ -7,6 +7,9 @@ function Main() {
     return (
         <div className="main_box">
             <img className="main-img" src="img/trees-gdbe9a52dd_1920.jpg"/>
+            <div className="main-img-text">
+                hello
+            </div>
             <div className="main_profile">
                 <Profile/>
             </div>
