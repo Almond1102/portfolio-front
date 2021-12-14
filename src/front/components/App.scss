@@ -1,0 +1,21 @@
+@import "../../global.scss";
+
+.front-app {
+    height: 100vh;
+    position: relative;
+
+    .section {
+        width: 100%;       
+        height: 100%;
+        background-color: $mainColor;
+    }
+
+    .rigth-bottom {
+        position: fixed;
+        bottom: 10%;
+        right: 10%;
+    }
+}
+
+
+
