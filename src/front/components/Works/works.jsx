@@ -1,15 +1,13 @@
 import React from 'react'
-import "./index.css"
+import "./works.scss"
 
 
-function Banner() {
+function works() {
 
-
-    
     return (
         <div className="works-box">
         </div>
     )
 }
 
-export default Banner
+export default works

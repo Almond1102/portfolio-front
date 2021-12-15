@@ -3,12 +3,13 @@
 .hamburger {
     display: flex;
     padding : 8px;
-    border-radius: 15px;
+    width: 170px;
+    justify-content: flex-end;
 
 
     .hamburger-icon {
-        width: 32px;
-        height: 25px;
+        width: 30px;
+        height: 24px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -25,8 +26,10 @@
     
     .hamburger-list {
         margin-right: 3px;
+        position: fixed;
+        right: 195px;
+        visibility: hidden;
         a {
-            display: inline;
             margin: 0px 4px;
             text-decoration: none;
         }
@@ -34,28 +37,35 @@
 
     
     &.active {
-        background-color: $subColor;
         color: white;
-
+        visibility: visible;
+        background-color: black;
+        border-radius: 10px;
         .hamburger-icon {
             span {
                 &:first-child {
                     background-color: white;
-                    transform: rotate(45deg);
+                    transform: rotate(44deg);
                 }
                 &:nth-child(2) {
                     opacity: 0;
                 }
                 &:last-child {
                     background-color: white;
-                    transform: rotate(-45deg);
+                    transform: rotate(-44deg);
                 }
             }
         }
         .hamburger-list{
+            right: 230px;
+            visibility: visible;
+            transition: all 0.5s ease;
             a {
                 color: white;
             }
+        }
+        #top {
+            margin-right: 5px;
         }
     }
 }

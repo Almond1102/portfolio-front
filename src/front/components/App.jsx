@@ -1,22 +1,25 @@
-import './App.scss';
 import React, {useState} from 'react'
-import Background from './Background/background';
+import './App.scss';
 import Hamburger from "./Hamburger/hamburger"
 import Works from "./Works/works"
+import Portfolios from "./Portfolios/portfolios"
 import Intro from "./Intro/intro"
+import Contact from "./Contact/contact"
 
 function App() {
-  const [menuOpen, setMenuOpen] = useState(true)
+  const [menuOpen, setMenuOpen] = useState(false)
 
   return (
     <div className="front-app">
-          <div className="section" > 
-            <Intro/>
-            <Works/>
-            <div className="rigth-bottom">
-              <Hamburger menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
-            </div>
-          </div>
+      <div className="sections" > 
+        <Intro/>
+        <Works/>
+        <Portfolios/>
+        <Contact/>
+      </div>
+      <div className="rigth-bottom">
+          <Hamburger menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
+      </div>
     </div>
   );
 }
