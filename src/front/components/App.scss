@@ -8,9 +8,7 @@
         
         width: 100%;       
         height: 100%;
-        background-color: $mainColor;
-        scroll-snap-type: y mandatory;
-        scrollbar-width: none; //파이어폭스에서 안보임
+        background-color: $subColor;
         scroll-behavior: smooth;
         
         &::-webkit-scrollbar { 
