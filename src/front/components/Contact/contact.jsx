@@ -1,11 +1,20 @@
-import React from 'react'
+import React, {useEffect} from 'react'
+import AOS from "aos"
 import "./contact.scss"
+import 'aos/dist/aos.css';
 
-function contact() {
+function Contact() {
+    
+    useEffect(()=> {
+        AOS.init({
+            duration : 1000
+        });
+    })
+    
     return (
         <div className='contact-box'>
         </div>
     )
 }
 
-export default contact
+export default Contact
