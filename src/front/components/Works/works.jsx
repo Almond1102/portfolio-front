@@ -1,13 +1,14 @@
-import React from 'react'
+import React, {useEffect} from 'react'
+import Profile from "../Profile/profile"
 import "./works.scss"
 
-
-function works() {
+function Works() {
 
     return (
         <div className="works-box">
+            <Profile/>
         </div>
     )
 }
 
-export default works
+export default Works

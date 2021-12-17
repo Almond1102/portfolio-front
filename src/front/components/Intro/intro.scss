@@ -11,14 +11,16 @@
 
 @keyframes blink {
     50% {
-        opacity: 0;
+        opacity: 0.8;
     }
 }
 
 .intro-box {
     color: #e1e1e1;
-    margin-left: 20%;
-
+    .intro-text-box {
+        padding-left: 15%;
+        margin-top: 60px;
+    }
     h1 {
         font-size: 150px;
         margin : 0;
@@ -43,7 +45,7 @@
         animation: Textanimated 5s infinite reverse ease;
     }
     #intro-3{
-        background-image: linear-gradient(to right, #e1e1e1, #e1e1e1, #ffd400, #e1e1e1, #e1e1e1);
+        background-image: linear-gradient(to right, #e1e1e1, #e1e1e1, black, #e1e1e1, #e1e1e1);
         -webkit-background-clip: text;
         color: transparent;
         background-size: 550%;
@@ -51,9 +53,12 @@
         animation: Textanimated 5s infinite reverse  ease;
     }
     .intro-icon {
-        position: absolute;
-        right: 50%;
-        bottom: 10%;
-        animation: blink 3s ease infinite;
+        width: 100%;
+        margin-top: 80px;
+        text-align: center;
+        animation: blink 2s infinite ease;
+        p {
+            margin: 0;
+        }
     }
 }
