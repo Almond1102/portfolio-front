@@ -1,0 +1,38 @@
+@import "../../../global.scss";
+
+@keyframes Textanimated {
+    from {
+        background-position: 0%;
+    }
+    to {
+        background-position: 100%;
+    }
+  }
+
+.info-container {
+    width: 340px;
+    margin-top: 50px;
+    .info-button {
+        margin: 25px 0px;
+        height: 40px;
+        border-radius: 30px;
+        padding: 6px;
+        position: relative;
+        cursor: pointer;
+        color: black;
+        background-color: #e1e1e1;
+    }
+    span {
+        font-family: Raleway;
+        font-size: large;
+        font-weight: bolder;
+        position: absolute;
+        left: 50px;
+    }    
+    
+    .info-button:hover {
+        background-image: linear-gradient(to right, #a1a1a1 0%, #DDD6F3 30%);
+        background-size: 650%;
+        animation: Textanimated 2s alternate ease both;
+    }
+}

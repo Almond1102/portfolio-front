@@ -1,15 +1,17 @@
-import React from 'react'
-import { KeyboardArrowUp,GitHub, Notes, Note} from '@material-ui/icons';
+import React, {useState} from 'react'
+import { KeyboardArrowUp,GitHub} from '@material-ui/icons';
 import ArticleIcon from '@mui/icons-material/Article';
 import "./hamburger.scss"
 
-function hamburger({menuOpen, setMenuOpen}) {
+function Hamburger({menuOpen, setMenuOpen}) {
+
+
     return (
         <div className={'hamburger ' + (menuOpen &&" active")}>
             <div className={'hamburger-list'}>
-                <a id="top" href="#intro"><KeyboardArrowUp/></a>
-                <a href="https://github.com/bjc1102"><GitHub/></a>
-                <ArticleIcon/>
+                <a href='#intro'><KeyboardArrowUp className='hamburgerlist-icon'/></a>
+                <a href="https://github.com/bjc1102"><GitHub className='hamburgerlist-icon'/></a>
+                <a href="https://jolly-jacket-396.notion.site/Notion-e0fa297858124ecea1d63103e971b22a"><ArticleIcon className='hamburgerlist-icon'/></a>
             </div>
             <div className='hamburger-icon' onClick={() => setMenuOpen(!menuOpen)}>
                 <span className='line1'></span>
@@ -21,4 +23,4 @@ function hamburger({menuOpen, setMenuOpen}) {
     )
 }
 
-export default hamburger
+export default Hamburger

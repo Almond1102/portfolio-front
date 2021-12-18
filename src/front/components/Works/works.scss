@@ -1,8 +1,43 @@
 @import "../../../global.scss";
+@keyframes waveAnimation{
+    from {
+        
+    }
+    to{
+
+    }
+}
 
 .works-box {
     background-color: $subColor;
     padding: 2% 8%;
+    position: relative;
+    .works-box-img-left{
+        position: absolute;
+        height: 150px;
+        transform: rotate(90deg);
+        right: -590px;
+    }
+    .works-box-img-right{
+        position: absolute;
+        height: 150px;
+        transform: rotate(-90deg);
+        left: -560px;
+    }
+    .works-typing {
+        text-align: center;
+    }
+    .works-container {
+        height: 100%;
+        padding: 0px 18%;
+        background-color: white;
+        border-radius: 30px;
+    }
+    .works-flex-container {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+    }
 }
 
 

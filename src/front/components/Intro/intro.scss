@@ -17,6 +17,7 @@
 
 .intro-box {
     color: #e1e1e1;
+    position: relative;
     .intro-text-box {
         padding-left: 15%;
         margin-top: 60px;
@@ -26,6 +27,7 @@
         margin : 0;
         display: inline-block;
         text-transform: uppercase;
+        font-family: 'Raleway';
     }
     #intro-1 {
         background-image: linear-gradient(to right, #e1e1e1, #e1e1e1 , black, #e1e1e1, #e1e1e1);
@@ -48,7 +50,7 @@
         background-image: linear-gradient(to right, #e1e1e1, #e1e1e1, black, #e1e1e1, #e1e1e1);
         -webkit-background-clip: text;
         color: transparent;
-        background-size: 550%;
+        background-size: 350%;
         background-position: -200%;
         animation: Textanimated 5s infinite reverse  ease;
     }
@@ -60,5 +62,18 @@
         p {
             margin: 0;
         }
+    }
+    .intro-text-attch {
+        -webkit-background-clip: text;
+        background-color: #2d3436;
+        background-image: linear-gradient(315deg, #2d3436 0%, #d3d3d3 74%);
+        color: transparent;
+        position: absolute;
+        transform: rotate(10deg);
+        height: 120px;
+        width: 380px;
+        font-family: 'Libre Baskerville', serif;
+        bottom: 390px;
+        right: 350px;
     }
 }
