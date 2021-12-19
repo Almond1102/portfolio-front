@@ -11,7 +11,7 @@
 
 @keyframes blink {
     50% {
-        opacity: 0.8;
+        opacity: 0.3;
     }
 }
 
@@ -35,7 +35,7 @@
         color: transparent;
         background-size: 400%;
         background-position: -200%;
-        animation: Textanimated 5s infinite reverse ease;
+        animation: Textanimated 3s infinite reverse ease;
     }
 
     #intro-2 {
@@ -44,7 +44,7 @@
         color: transparent;
         background-size: 500%;
         background-position: -200%;
-        animation: Textanimated 5s infinite reverse ease;
+        animation: Textanimated 3s infinite reverse ease;
     }
     #intro-3{
         background-image: linear-gradient(to right, #e1e1e1, #e1e1e1, black, #e1e1e1, #e1e1e1);
@@ -52,7 +52,7 @@
         color: transparent;
         background-size: 350%;
         background-position: -200%;
-        animation: Textanimated 5s infinite reverse  ease;
+        animation: Textanimated 3s infinite reverse  ease;
     }
     .intro-icon {
         width: 100%;
@@ -65,15 +65,15 @@
     }
     .intro-text-attch {
         -webkit-background-clip: text;
-        background-color: #2d3436;
-        background-image: linear-gradient(315deg, #2d3436 0%, #d3d3d3 74%);
+        background-color: #e4e4dc;
+        background-image: linear-gradient(90deg, #e4e4dc 25%, #b98d8d 100%);
         color: transparent;
         position: absolute;
-        transform: rotate(10deg);
         height: 120px;
         width: 380px;
         font-family: 'Libre Baskerville', serif;
         bottom: 390px;
-        right: 350px;
+        right: 390px;
+        font-size: 80px;
     }
 }

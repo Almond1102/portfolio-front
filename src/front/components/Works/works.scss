@@ -1,12 +1,5 @@
 @import "../../../global.scss";
-@keyframes waveAnimation{
-    from {
-        
-    }
-    to{
 
-    }
-}
 
 .works-box {
     background-color: $subColor;
@@ -16,13 +9,15 @@
         position: absolute;
         height: 150px;
         transform: rotate(90deg);
-        right: -590px;
+        top: 100px;
+        right: -550px;
     }
     .works-box-img-right{
         position: absolute;
         height: 150px;
         transform: rotate(-90deg);
-        left: -560px;
+        top: 100px;
+        left: -550px;
     }
     .works-typing {
         text-align: center;
@@ -32,11 +27,14 @@
         padding: 0px 18%;
         background-color: white;
         border-radius: 30px;
-    }
-    .works-flex-container {
-        display: flex;
-        justify-content: space-evenly;
-        width: 100%;
+        .works-info-container {
+            margin-top: 30px;
+        }
+        .works-flex-container {
+            display: flex;
+            justify-content: space-evenly;
+            width: 100%;
+        }
     }
 }
 

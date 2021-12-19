@@ -1,6 +1,40 @@
 @import "../../../global.scss";
 
-span {
+.typing-box {
     font-size: 4.5rem;
     font-family: Raleway;
+    span {
+        color: red;
+        font-weight: bolder;
+    }
+}
+
+.ityped-cursor {
+    font-size: 4.5rem;
+    opacity: 1;
+    -webkit-animation: blink 1s infinite;
+    -moz-animation: blink 0.3s infinite;
+    animation: blink 1s infinite;
+    animation-direction: alternate;
+}
+ 
+@keyframes blink {
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+ 
+@-webkit-keyframes blink {
+    100% {
+        opacity: 0;
+    }
+}
+ 
+@-moz-keyframes blink {
+    100% {
+        opacity: 0;
+    }
 }

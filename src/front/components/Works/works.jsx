@@ -16,7 +16,7 @@ function Works() {
                     <Profile/>
                     <Info/>
                 </div>
-                <div className="works-footer-container">
+                <div className="works-info-container">
                     HIHIHIHI
                 </div>
             </div>
