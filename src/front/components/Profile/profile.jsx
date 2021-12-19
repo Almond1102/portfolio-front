@@ -13,7 +13,8 @@ function Profile() {
                 <div className="hover-text">
                     <p>1998-11-02</p>
                     <p>최병주</p>
-                    <p>Front end</p>
+                    <p>Byeong-Ju Choi</p>
+                    <p>Developer</p>
                 </div>
             </div>
         </div>

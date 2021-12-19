@@ -6,20 +6,6 @@
     padding: 2% 8%;
     position: relative;
 
-    .works-box-img-left{
-        position: absolute;
-        height: 150px;
-        transform: rotate(90deg);
-        top: 100px;
-        right: -550px;
-    }
-    .works-box-img-right{
-        position: absolute;
-        height: 150px;
-        transform: rotate(-90deg);
-        top: 100px;
-        left: -550px;
-    }
     .works-typing {
         text-align: center;
     }
@@ -28,13 +14,15 @@
         padding: 0px 18%;
         background-color: white;
         border-radius: 30px;
+        position: relative;
+
         .image {
             margin-top: 80px;
         }
         .line {
             height: 2px;
             background-color: black;
-            margin: 0px 70px;
+            margin: 0px 40px;
         }
         .works-info-container {
             margin-top: 30px;

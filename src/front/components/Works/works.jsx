@@ -9,8 +9,7 @@ function Works() {
 
     return (
         <div className="works-box">
-            <img className="works-box-img-left"src="img/wavesOpacity.svg"/>
-            <img className="works-box-img-right"src="img/wavesOpacity.svg"/>
+
             <div className="works-container">
                 <div className="works-typing"><Typing/></div>
                 <div className="works-flex-container">
