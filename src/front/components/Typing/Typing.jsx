@@ -9,7 +9,7 @@ function Typing() {
     useEffect(()=> {
         init(myElement.current, {
              showCursor: true, 
-             strings: [' Developer', ' Designer'],
+             strings: [' Frontend', 'Developer / Designer', ' HTML / CSS', ' JavaScript' , ' React'],
              backSpeed:  80,
              backDelay:  1500,
             })
@@ -17,7 +17,7 @@ function Typing() {
 
     return (
         <div className='typing-box'>
-            I want to be a<span ref={myElement}></span>
+            <span ref={myElement}></span>
         </div>
     )
 }

@@ -2,6 +2,7 @@ import React, {useEffect} from 'react'
 import Profile from "../Profile/profile"
 import Info from '../Info/Info'
 import Typing from '../Typing/Typing'
+import Slider from "../Slider/Slider"
 import "./works.scss"
 
 function Works() {
@@ -13,11 +14,12 @@ function Works() {
             <div className="works-container">
                 <div className="works-typing"><Typing/></div>
                 <div className="works-flex-container">
-                    <Profile/>
+                    <div className="image"><Profile/></div>
                     <Info/>
                 </div>
+                <div className="line"></div>
                 <div className="works-info-container">
-                    HIHIHIHI
+                    <Slider/>
                 </div>
             </div>
         </div>
