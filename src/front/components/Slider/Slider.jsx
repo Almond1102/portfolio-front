@@ -1,4 +1,5 @@
 import React from 'react'
+import LaptopIcon from '@mui/icons-material/Laptop';
 import "./Slider.scss"
 
 function Slider() {
@@ -8,6 +9,7 @@ function Slider() {
                 <div className="item">
                     <div className="left">
                         <div className="lefContainer">
+                                <LaptopIcon/>
                         </div>
                     </div>
                     <div className="right"></div>
