@@ -9,7 +9,7 @@ function Intro() {
         <div className='intro-box' id="intro">
             <div className="intro-text-box">
                 <div data-aos="fade-right"><p className='left'>Hi, my name is</p></div>
-                <div data-aos="fade-right"><h2 id="intro-2">Byeong-Ju choi</h2></div>
+                <div data-aos="fade-right"><h2 id="intro-2">Byeong-Ju Choi</h2></div>
                 <div data-aos="zoom-up"><p className="center">and</p></div>
                 <div data-aos="fade-left"><h2 id="intro-3"> it's Choi Portfolio</h2></div>
                 <div data-aos="fade-left"><p className='right'>Frontend</p></div>

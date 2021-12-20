@@ -1,32 +1,52 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useState } from 'react'
 import PortfolioList from '../PortfolioList/PortfolioList'
 import "./portfolios.scss"
+import {
+    ReactPortfolio,
+    webPortfolio,
+    mobilePortfolio,
+    designPortfolio,
+    contentPortfolio
+} from "../../../data"
 
 function Portfolios() {
     const [selected, setSelected] = useState("featured");
+    const [data, setData] = useState("featured");
+
     const list = [
     {
-        id : "featured",
-        title: "Featured"
+        id : "react",
+        title: "React"
     },
     {
         id: "web",
-        title : "Web App"
+        title : "Web"
     },
     {
         id: "mobile",
-        title : "Mobile App"
+        title : "Mobile"
     },
     {
         id: "design",
-        title : "Design App"
+        title : "Design"
     },
-    {
-        id: "content",
-        title : "Content"
-    }
     ]
+
+    useEffect(()=> {
+        switch(selected) {
+            case "react" : setData(ReactPortfolio);
+            break;
+            case "web" : setData(webPortfolio);
+            break;
+            case "mobile" : setData(mobilePortfolio);
+            break;
+            case "design" : setData(designPortfolio);
+            break;
+            default:
+                setData(ReactPortfolio);
+        }
+    }, [selected])
 
     return (
         <div className='portfolio'>
@@ -43,30 +63,15 @@ function Portfolios() {
                 ))}
             </ul>
             <div className="container">
-                <div className="item">
-                    <img src="https://media.vlpt.us/images/ghdtjrrl94/post/8e62dd50-e6ee-4588-bb07-71a3e0914c28/project-planning-header@2x.png" alt="project" />
-                    <h3>Banking App</h3>
+                {data.map((d, index)=> 
+                <div key={index} className="item">
+                    <img src={d.img} alt="project" />
+                    <div className='contents'>
+                        <h3>{d.title}</h3>
+                        <p>{d.content}</p>
+                    </div>
                 </div>
-                <div className="item">
-                    <img src="https://media.vlpt.us/images/ghdtjrrl94/post/8e62dd50-e6ee-4588-bb07-71a3e0914c28/project-planning-header@2x.png" alt="project" />
-                    <h3>Banking App</h3>
-                </div>
-                <div className="item">
-                    <img src="https://media.vlpt.us/images/ghdtjrrl94/post/8e62dd50-e6ee-4588-bb07-71a3e0914c28/project-planning-header@2x.png" alt="project" />
-                    <h3>Banking App</h3>
-                </div>
-                <div className="item">
-                    <img src="https://media.vlpt.us/images/ghdtjrrl94/post/8e62dd50-e6ee-4588-bb07-71a3e0914c28/project-planning-header@2x.png" alt="project" />
-                    <h3>Banking App</h3>
-                </div>
-                <div className="item">
-                    <img src="https://media.vlpt.us/images/ghdtjrrl94/post/8e62dd50-e6ee-4588-bb07-71a3e0914c28/project-planning-header@2x.png" alt="project" />
-                    <h3>Banking App</h3>
-                </div>
-                <div className="item">
-                    <img src="https://media.vlpt.us/images/ghdtjrrl94/post/8e62dd50-e6ee-4588-bb07-71a3e0914c28/project-planning-header@2x.png" alt="project" />
-                    <h3>Banking App</h3>
-                </div>
+                )}
             </div>
         </div>
     )
