@@ -2,8 +2,38 @@ import React from 'react'
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import "./Slider.scss"
+import Badge from "../Badge/index"
+import { useState } from 'react';
 
 function Slider() {
+    const [currentSlide , setCurrentSlide] = useState(0);
+
+    const handleClick = (direction) => {
+        if(direction === "left") 
+            currentSlide !== 0 && setCurrentSlide(currentSlide - 1)  
+        else if(direction === "right")
+            currentSlide !== 2 && setCurrentSlide(currentSlide + 1)
+    }
+
+    const arrowClick = () => {
+        if (currentSlide === 0) {
+            return <ArrowForwardIosIcon className='arrow right' fontSize='large'  onClick={()=>handleClick("right")}/> 
+        }
+        if (currentSlide === data.length-1) {
+            return <ArrowBackIosIcon className='arrow left' fontSize='large' onClick={()=>handleClick("left")}/>
+        }
+        else {
+            return <><ArrowBackIosIcon className='arrow left' fontSize='large' onClick={()=>handleClick("left")}/> 
+                    <ArrowForwardIosIcon className='arrow right' fontSize='large'  onClick={()=>handleClick("right")}/></>
+        }
+    }
+    const pageLink = (title, link) => {
+        if(link)
+            return <a href={link} target='_blank'>{title}</a>
+        else 
+            return title
+    }
+    
     const date = new Date();
     const data= [
         {
@@ -31,30 +61,38 @@ function Slider() {
             sliderimg : "img/resume.PNG"
         }
     ];
+
+    const renderImg = (img) => {
+        if(img) { 
+            return <img src={img} alt="content img" />
+        }
+        else {
+            return <div className='badgeContainer'><Badge/></div>
+        }
+    }
+
     return (
-        <div className='slider'>
+        <div className='slider' style={{transform:`translateX(-${currentSlide * 100}vw)`}}>
             {data.map(d => (
-            <div className="container">
+            <div key={d.id} className="container">
                 <div className="item">
                     <div className="left">
                         <div className="leftContainer">
                             <div className="imgContainer">
                                 <img src={d.iconimg} alt="sliderimg" />
                             </div>
-                            <h2><a href={d.link}>{d.title}</a></h2>
+                            <h2>{pageLink(d.title, d.link)}</h2>
                             <p>{d.contents}</p>
                             <span>최근 업데이트 : {date.getFullYear()}/{date.getMonth() + 1}/{date.getDate()}</span>
                         </div>
                     </div>
                     <div className="right">
-                        <div className="imgContainer">
-                            <img src={d.sliderimg} alt="노션" />
-                        </div>
+                        {renderImg(d.sliderimg)}
                     </div>
                 </div>
+                {arrowClick()}
             </div>))}
-            <ArrowBackIosIcon className='arrow left' fontSize='large'/>
-            <ArrowForwardIosIcon className='arrow right' fontSize='large'/>
+
         </div>
     )
 }

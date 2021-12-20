@@ -9,7 +9,6 @@ function Works() {
 
     return (
         <div className="works-box">
-
             <div className="works-container">
                 <div className="works-typing"><Typing/></div>
                 <div className="works-flex-container">

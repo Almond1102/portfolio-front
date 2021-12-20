@@ -4,17 +4,35 @@
     src: url("../../fonts/Hahmlet-SemiBold.ttf");
 }
 
-
+@keyframes blinck {
+    50% {
+        opacity: 0.1;
+    }
+}
 
 .profile-container {
     text-align: center;
     position: relative;
+    .pointer {
+        position: absolute;
+        bottom: 0px;
+        z-index: 1;
+        transform: rotate(90deg);
+        animation: blink 1s infinite ease;
+        img{
+            width: 30px;
+            height: 30px;
+        }
+    }
     .profile-img {
+        position: relative;
         width: 208px;
         height: 208px;
         border-radius: 50%;
+        z-index: 0;
     }
     .hover-container {
+        z-index: 0;
         position: absolute;
         top: 0px;
         width: 100%;
@@ -23,6 +41,7 @@
         background-color: $backgroundColor;
         opacity: 0;
     }
+
 }
 
 .profile-container:hover {

@@ -1,82 +1,80 @@
 .slider {
-    width: 100%;
     height: 350px;
     display: flex;
     position: absolute;
-    justify-content: flex-start;
-    left: 0;
+    left: 0vw;
+    transition: all 1s ease;
     .container {
         width: 100vw;
         display: flex;
         align-items: center;
         justify-content: center;
-    }
-    .item {
-        width: 900px;
-        height: 100%;
-        background-color: #eeeeea;
-        border-radius: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        .left {
-            font-family: "Noto Sans kr", sans-serif;
-            flex: 4;
-            height: 80%;
+        position: relative;
+        .item {
+            width: 900px;
+            background-color: #e1e1e1;
+            border-radius: 20px;
             display: flex;
             align-items: center;
             justify-content: center;
-            .leftContainer {
-                width: 90%;
-                height: 100%;
-                display: flex;
-                justify-content: space-evenly;
-                flex-direction: column;
-                .imgContainer {
-                    width: 40px;
-                    height: 40px;
+    
+            .left {
+                font-family: "Noto Sans kr", sans-serif;
+                flex: 4;
+                height: 350px;
+                .leftContainer {
+                    width: 100%;
+                    height: 100%;
                     display: flex;
-                }
-                h2 {
-                    font-size: 20px;
-                    margin: 0;
-                    a {
-                        color: black;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    padding: 30px;
+                    .imgContainer {
+                        width: 40px;
+                        height: 40px;
+                        display: flex;
+                    }
+                    h2 {
+                        font-size: 20px;
+                        margin: 0;
+                        a {
+                            color: black;
+                        }
+                    }
+                    p {
+                        font-size: 13px;
+                    }
+                    span {
+                        font-size: 12px;
+                        font-weight: bold;
                     }
                 }
-                p {
-                    font-size: 13px;
-                }
-                span {
-                    font-size: 12px;
-                    font-weight: bold;
-                }
             }
-        }
-        .right {
-            flex: 8;
-            height: 100%;
-            overflow: hidden;
-            img {
-                width: 100%;
+            .right {
+                flex: 8;
                 height: 350px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+                img {
+                    width: 100%;
+                    height: 350px;
+                }
             }
         }
     }
+
 }
 
 .arrow  {
-    height: 50px;
     position: absolute;
     cursor: pointer;
-    
+    transition: all 1s ease;
     &.left {
-        left: 200px;
-        top: 50%
-    };
+        left: 450px;
+    }
     &.right {
-        right: 200px;
-        top: 50%;
+        right: 450px;
     }
 }
