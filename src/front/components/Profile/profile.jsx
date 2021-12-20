@@ -8,9 +8,7 @@ function Profile() {
 
     return (
         <div className='profile-container'>
-            <div className="pointer">
-                <img src="https://www.pngrepo.com/download/301378/cursor-click.png" alt="cursor" />
-            </div>
+            <img src="https://www.jing.fm/clipimg/full/64-649094_computer-mouse-pointer-point-and-click-clip-art.png" alt="cursor" className='img'/>
             <img className="profile-img" src="img/profile.png"/>
             <div className="hover-container">
                 <div className="hover-text">
@@ -20,7 +18,6 @@ function Profile() {
                     <p>Developer</p>
                 </div>
             </div>
-
         </div>
     )
 }

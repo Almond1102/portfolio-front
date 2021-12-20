@@ -9,7 +9,7 @@ function Typing() {
     useEffect(()=> {
         init(myElement.current, {
              showCursor: true, 
-             strings: [' Frontend', 'Developer / Designer', ' HTML / CSS', ' JavaScript' , ' React'],
+             strings: [' Frontend', 'Developer / Designer', ' HTML / CSS', ' JavaScript' , ' React', ' SCSS'],
              backSpeed:  80,
              backDelay:  1500,
             })

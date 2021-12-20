@@ -17,7 +17,7 @@ function Slider() {
 
     const arrowClick = () => {
         if (currentSlide === 0) {
-            return <ArrowForwardIosIcon className='arrow right' fontSize='large'  onClick={()=>handleClick("right")}/> 
+            return <ArrowForwardIosIcon className='arrow right' fontSize='large' onClick={()=>handleClick("right")}/> 
         }
         if (currentSlide === data.length-1) {
             return <ArrowBackIosIcon className='arrow left' fontSize='large' onClick={()=>handleClick("left")}/>

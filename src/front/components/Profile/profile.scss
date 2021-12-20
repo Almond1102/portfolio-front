@@ -13,23 +13,21 @@
 .profile-container {
     text-align: center;
     position: relative;
-    .pointer {
+    .img{
         position: absolute;
-        bottom: 0px;
-        z-index: 1;
+        bottom: 10px;
+        left: 20px;
         transform: rotate(90deg);
         animation: blink 1s infinite ease;
-        img{
-            width: 30px;
-            height: 30px;
-        }
+        z-index: 1;
+        width: 30px;
+        height: 30px;
     }
+    
     .profile-img {
-        position: relative;
         width: 208px;
         height: 208px;
         border-radius: 50%;
-        z-index: 0;
     }
     .hover-container {
         z-index: 0;
@@ -41,16 +39,18 @@
         background-color: $backgroundColor;
         opacity: 0;
     }
-
-}
-
-.profile-container:hover {
-    .hover-container{
-        opacity: 1;
-        .hover-text {
-            margin: 20px;
-            transition: all 0.5s ease;
-            color: $textColor;
+    &:hover {
+        .hover-container{
+            opacity: 1;
+            cursor: pointer;
+            .hover-text {
+                margin: 20px;
+                transition: all 1s ease;
+                color: $textColor;
+            }
+        }
+        .img {
+            display: none;
         }
     }
 }

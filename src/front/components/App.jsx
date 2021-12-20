@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import './App.scss';
 import Hamburger from "./Hamburger/hamburger"
 import Works from "./Works/works"
-import Portfolios from "./Portfolios/portfolios"
+import Portfolios from "./Portfolios/Portfolios"
 import Intro from "./Intro/intro"
 import Contact from "./Contact/contact"
 
