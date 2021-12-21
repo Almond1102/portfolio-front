@@ -11,9 +11,10 @@ function Hamburger({menuOpen, setMenuOpen}) {
         <div className={'hamburger ' + (menuOpen &&" active")}>
             <div className={'hamburger-list'}>
                 <a href='#intro'><KeyboardArrowUp className='hamburgerlist-icon'/></a>
-                <a href="https://github.com/bjc1102"><GitHub className='hamburgerlist-icon'/></a>
-                <a href="https://jolly-jacket-396.notion.site/Notion-e0fa297858124ecea1d63103e971b22a"><ArticleIcon className='hamburgerlist-icon'/></a>
-                <a href="https://jolly-jacket-396.notion.site/Notion-e0fa297858124ecea1d63103e971b22a"><EditIcon className='hamburgerlist-icon'/></a>
+                <a href="https://github.com/bjc1102" target='_blank'><GitHub className='hamburgerlist-icon'/></a>
+                <a href="https://jolly-jacket-396.notion.site/Notion-e0fa297858124ecea1d63103e971b22a" target='_blank'><EditIcon className='hamburgerlist-icon'/></a>
+                <a href="https://jolly-jacket-396.notion.site/Notion-e0fa297858124ecea1d63103e971b22a" target='_blank'><ArticleIcon className='hamburgerlist-icon'/></a>
+
             </div>
             <div className='hamburger-icon' onClick={() => setMenuOpen(!menuOpen)}>
                 <span className='line1'></span>
