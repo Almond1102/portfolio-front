@@ -63,7 +63,7 @@ function Portfolios() {
                 ))}
             </ul>
             <div className="container">
-                {data.map((d, index)=> 
+                {/* {data.map((d, index)=> 
                 <div key={index} className="item">
                     <img src={d.img} alt="project" />
                     <div className='contents'>
@@ -71,7 +71,7 @@ function Portfolios() {
                         <p>{d.content}</p>
                     </div>
                 </div>
-                )}
+                )} */}
             </div>
         </div>
     )
