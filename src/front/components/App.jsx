@@ -8,7 +8,6 @@ import Contact from "./Contact/contact"
 
 
 
-
 function App() {
   const [menuOpen, setMenuOpen] = useState(false)
 

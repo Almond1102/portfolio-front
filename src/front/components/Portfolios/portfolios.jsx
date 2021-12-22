@@ -51,7 +51,6 @@ function Portfolios() {
     return (
         <div className='portfolio'>
             <h1>Portfolio</h1>
-            <div className="line"></div>
             <ul>
                 {list.map((item, index)=>(
                     <PortfolioList 
