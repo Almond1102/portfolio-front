@@ -22,12 +22,19 @@
         z-index: 1;
         width: 30px;
         height: 30px;
+        @include mobile {
+            
+        }
     }
     
     .profile-img {
         width: 208px;
         height: 208px;
         border-radius: 50%;
+        @include mobile {
+            width: 208px;
+            height: 208px;
+        }
     }
     .hover-container {
         z-index: 0;
@@ -38,6 +45,9 @@
         border-radius: 50%;
         background-color: $backgroundColor;
         opacity: 0;
+        @include mobile {
+            height: 100%;
+        }
     }
     &:hover {
         .hover-container{
@@ -47,6 +57,8 @@
                 margin: 20px;
                 transition: all 1s ease;
                 color: $textColor;
+            }
+            @include mobile {
             }
         }
         .img {

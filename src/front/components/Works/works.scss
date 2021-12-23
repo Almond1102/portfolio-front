@@ -3,7 +3,7 @@
 
 .works-box {
     background-color: $subColor;
-    padding: 2% 8%;
+    padding: 2% 10%;
     position: relative;
 
     .works-typing {
@@ -14,26 +14,50 @@
         padding: 0px 18%;
         background-color: white;
         border-radius: 30px;
-        .image {
-            margin-top: 80px;
-        }
         .line {
             height: 2px;
             background-color: black;
             margin: 0px 40px;
+            @include mobile {
+                display: none;
+            }
         }
         .works-flex-container {
             display: flex;
             justify-content: space-evenly;
             width: 100%;
+            @include mobile {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .image {
+                margin-top: 80px;
+                @include mobile {
+                    margin-top: 40px;
+                }
+            }
         }
-        .works-info-container {
+        .works-slide {
             margin-top: 30px;
             display: flex;
             right: 0;
             justify-content: space-evenly;
             align-items: center;
             height: 350px;
+            @include mobile {
+                display: none;
+            }
+        }
+        .work-mobile {
+            display: none;
+            @include mobile {
+                display: block;
+                font-size: 15px;
+                text-align: center;
+                color: rgb(199, 199, 199);
+                font-family: 'Roboto', sans-serif;
+            }
         }
     }
 }

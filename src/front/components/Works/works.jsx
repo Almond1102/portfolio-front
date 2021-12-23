@@ -16,9 +16,10 @@ function Works() {
                     <Info/>
                 </div>
                 <div className="line"></div>
-                <div className="works-info-container">
+                <div className="works-slide">
                     <Slider/>
                 </div>
+                <h2 className='work-mobile'>PC에서 보시는 것을 권장드립니다</h2>
             </div>
         </div>
     )

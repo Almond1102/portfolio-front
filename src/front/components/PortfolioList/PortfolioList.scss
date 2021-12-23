@@ -2,10 +2,14 @@
 
 
 .portfolioList {
-    font-size: 14px;
+    font-size: 18px;
     margin-right: 50px;
     padding: 7px;
     border-radius: 10px;
+    color: #7c7c7c;
+    @include mobile{
+        margin-right:5px;
+    }
     cursor: pointer;
     &.active {
         background-color: $backgroundColor;

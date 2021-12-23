@@ -4,11 +4,9 @@
     from {
         bottom: 0px;
     }
-
     75% {
         bottom: 50px;
     }
-
     100% {
         bottom : 40px;
     }
@@ -21,6 +19,12 @@
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-end;
+    @include mobile {
+        position: relative;
+        width: 26px;
+        height: 180px;
+        padding: 0;
+    }
 
     .hamburger-icon {
         width: 30px;
@@ -30,6 +34,11 @@
         justify-content: space-between;
         cursor: pointer;
         z-index: 1;
+        @include mobile {
+            width: 20px;
+            height: 17px;
+        }
+
         span {
             width: 100%;
             height: 3px;
@@ -44,9 +53,15 @@
         display: flex;
         position: absolute;
         right: 16px;
+        @include mobile {
+            right: 0;
+        }
         a {
             text-decoration: none;
             padding: 10px 0px;
+            @include mobile {
+                padding: 0;
+            }
         }
     }
     .hamburgerlist-icon:hover {
@@ -56,8 +71,6 @@
 
     &.active {
         color: white;
-        border-radius: 10px;
-        border-radius: 15px;
         
         .hamburger-icon {
             span {
@@ -78,8 +91,20 @@
             animation: tutsFade 0.3s 0s ease-in both;
             flex-direction: column;
             visibility: visible;
+            @include mobile {
+                animation: none;
+                bottom: 20px;
+            }
             a {
                 color: white;
+                @include mobile {
+                    padding-bottom: 3px;
+                }
+            }
+        }
+        .hamburger-list-icon {
+            @include mobile {
+                font-size: 10px;
             }
         }
     }

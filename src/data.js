@@ -241,3 +241,22 @@ export const ReactPortfolio = [
         content : "리액트로 만든 첫 번째 포트폴리오 입니다"
     },
   ];
+
+  export const list = [
+    {
+        id : "react",
+        title: "React"
+    },
+    {
+        id: "web",
+        title : "Web"
+    },
+    {
+        id: "mobile",
+        title : "Mobile"
+    },
+    {
+        id: "design",
+        title : "Design"
+    },
+    ]

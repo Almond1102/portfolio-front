@@ -4,6 +4,11 @@
     font-size: 64px;
     font-family: 'Oswald', sans-serif;
     height: 100%;
+    @include mobile {
+        font-size: 40px;
+        margin-top: 3px;
+        overflow: hidden;
+    }
     span {
         color: #0a192f;
     }
@@ -11,6 +16,9 @@
 
 .ityped-cursor {
     font-size: 64px;
+    @include mobile {
+        font-size: 40px;
+    }
     color: black !important;
     opacity: 1;
     -webkit-animation: blink 1s infinite;

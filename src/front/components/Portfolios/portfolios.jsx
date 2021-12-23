@@ -7,31 +7,12 @@ import {
     webPortfolio,
     mobilePortfolio,
     designPortfolio,
-    contentPortfolio
+    list,
 } from "../../../data"
 
 function Portfolios() {
-    const [selected, setSelected] = useState("featured");
-    const [data, setData] = useState("featured");
-
-    const list = [
-    {
-        id : "react",
-        title: "React"
-    },
-    {
-        id: "web",
-        title : "Web"
-    },
-    {
-        id: "mobile",
-        title : "Mobile"
-    },
-    {
-        id: "design",
-        title : "Design"
-    },
-    ]
+    const [selected, setSelected] = useState("react");
+    const [data, setData] = useState([]);
 
     useEffect(()=> {
         switch(selected) {
@@ -43,8 +24,7 @@ function Portfolios() {
             break;
             case "design" : setData(designPortfolio);
             break;
-            default:
-                setData(ReactPortfolio);
+            default: setData(ReactPortfolio);
         }
     }, [selected])
 
@@ -63,7 +43,7 @@ function Portfolios() {
                 ))}
             </ul>
             <div className="container">
-                {/* {data.map((d, index)=> 
+                {data.map((d, index)=> 
                 <div key={index} className="item">
                     <img src={d.img} alt="project" />
                     <div className='contents'>
@@ -71,7 +51,7 @@ function Portfolios() {
                         <p>{d.content}</p>
                     </div>
                 </div>
-                )} */}
+                )}
             </div>
         </div>
     )

@@ -1,5 +1,6 @@
 @import "../../../global.scss";
 
+
 @keyframes Textanimated {
     from {
         background-position: 0%;
@@ -23,6 +24,11 @@
     flex-direction: column;
     align-content: flex-start;
     padding: 0% 25%;
+    @include mobile {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
     .intro-text-box {
         margin-top: 60px 50px 50px 0px;
     }
@@ -31,6 +37,9 @@
         margin : 0;
         display: block;
         font-family: 'Raleway';
+        @include mobile {
+            font-size: 70px;
+        }
     }
 
     #intro-2 {
@@ -49,7 +58,9 @@
         font-weight: 700;
         font-size: 1.3rem;
         margin: 0;
-        
+        @include mobile {
+            font-size: 13px;
+        }
     }
     .center {
         text-align: center;
@@ -61,6 +72,9 @@
         font-weight: 700;
         font-size: 1.3rem;
         margin-top: 0;
+        @include mobile {
+            font-size: 13px;
+        }
     }
 
     #intro-3{
@@ -84,9 +98,16 @@
     .navigation {
         position: absolute;
         text-align: center;
-        bottom: 50px;
-        left: 48%;
+        bottom: 30px;
+        left: 50%;
         animation: blink 2s infinite alternate ease;
+        transform: translate(-50%, -50%);
+        @include mobile {
+            left: 50%;
+            bottom: 0;
+            font-size: 12px;
+            transform: translate(-50%, -50%);
+        }
         p {
             margin: 0;
         }
