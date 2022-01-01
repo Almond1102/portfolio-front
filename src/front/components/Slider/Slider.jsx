@@ -55,10 +55,10 @@ function Slider() {
         {
             id : 3,
             title : "이력서(resume)",
-            contents : "배운 것들을 잘 정리하기 위해 최대한 수정하고 있습니다",
+            contents : "",
             iconimg : "https://cdn4.iconfinder.com/data/icons/online-course-2/512/resume-degree-job-applicant-512.png",
-            link : "https://jolly-jacket-396.notion.site/Basic-resume-ebe615df4bdd4bfe8770a4f2d8d32258",
-            sliderimg : "img/resume.PNG"
+            link : false,
+            sliderimg : "img/logo.PNG"
         }
     ];
 
